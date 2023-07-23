@@ -6,6 +6,8 @@
 // @match        https://chat.openai.com/*
 // @grant        GM_setClipboard
 // @grant        window.onurlchange
+// @updateURL    https://raw.githubusercontent.com/changchiyou/ChatGPT-to-Markdown-for-Trello/main/scripts/chatgpt2markdown.js
+// @downloadURL  https://raw.githubusercontent.com/changchiyou/ChatGPT-to-Markdown-for-Trello/main/scripts/chatgpt2markdown.js
 // ==/UserScript==
 
 (function() {
