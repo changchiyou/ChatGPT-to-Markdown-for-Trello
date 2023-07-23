@@ -1,6 +1,8 @@
 # ChatGPT-to-Markdown-for-Trello
 Convert ChatGPT conversation text to Markdown for Trello.
 
+https://github.com/changchiyou/ChatGPT-to-Markdown-for-Trello/assets/46549482/7a58f0c8-3e91-4ba2-a58a-05d889f138ba
+
 It should be noted that Trello is sensitive to Markdown syntax. Sometimes, a minor variation in line breaks can cause display problems. 
 
 This was particularly challenging since the existing Chrome Plugin for converting ChatGPT conversations into Markdown did not meet my requirements. Hence, I made the decision to develop my own solution.
