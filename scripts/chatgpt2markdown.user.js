@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         ChatGPT-to-Markdown-for-Trello
 // @namespace    https://chat.openai.com/
-// @version      1.0
+// @version      1.0.1
 // @description  Convert ChatGPT conversation text to Markdown for Trello
 // @match        https://chat.openai.com/*
 // @grant        GM_setClipboard
 // @grant        window.onurlchange
-// @updateURL    https://raw.githubusercontent.com/changchiyou/ChatGPT-to-Markdown-for-Trello/main/scripts/chatgpt2markdown.js
-// @downloadURL  https://raw.githubusercontent.com/changchiyou/ChatGPT-to-Markdown-for-Trello/main/scripts/chatgpt2markdown.js
+// @updateURL    https://raw.githubusercontent.com/changchiyou/ChatGPT-to-Markdown-for-Trello/main/scripts/chatgpt2markdown.user.js
+// @downloadURL  https://raw.githubusercontent.com/changchiyou/ChatGPT-to-Markdown-for-Trello/main/scripts/chatgpt2markdown.user.js
 // ==/UserScript==
 
 (function() {
