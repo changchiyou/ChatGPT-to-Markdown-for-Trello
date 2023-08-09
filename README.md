@@ -13,9 +13,7 @@ This was particularly challenging since the existing Chrome Plugin for convertin
 ## Installation
 
 1. Install [Tampermoneky](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) on your browser
-2. Copy the script [chatgpt2markdown.js](/scripts/chatgpt2markdown.js)
-   https://github.com/changchiyou/ChatGPT-to-Markdown-for-Trello/blob/3892a78244b298bc44e4be5c95800c7375beb185/scripts/chatgpt2markdown.js#L1-L96
-3. Paste into Tampermonkey's editor, which can be opened by clicking the tampermonkey icon and select `Create a new script...` option.
+2. Access https://raw.githubusercontent.com/changchiyou/ChatGPT-to-Markdown-for-Trello/main/scripts/chatgpt2markdown.user.js with the browser (copy&paste or simply click the hyperlink) which has already installed [Tampermoneky](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) and click `Install` button.
 
 ## Usage
 
