@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ChatGPT-to-Markdown-for-Trello
 // @namespace    https://chat.openai.com/
-// @version      1.0.1
+// @version      1.0.2
 // @description  Convert ChatGPT conversation text to Markdown for Trello
 // @match        https://chat.openai.com/*
 // @grant        GM_setClipboard
@@ -12,6 +12,8 @@
 
 (function() {
     'use strict';
+
+    let processedWhiteSpaces = new Set();
 
     function h(html) {
         // remove the head tab of code blocks
@@ -49,8 +51,12 @@
             const whiteSpace = element.querySelector('.whitespace-pre-wrap');
 
             if (whiteSpace) {
-                content += content === '' ? '' : '--------\n\n';
-                content += `**${element.querySelectorAll('img').length >= 1 ? element.querySelectorAll('img')[0].alt : 'ChatGPT'}**: ${h(whiteSpace.innerHTML)}\n\n`;
+                const htmlContent = whiteSpace.innerHTML;
+                if (!processedWhiteSpaces.has(htmlContent)) {
+                    content += content === '' ? '' : '--------\n\n';
+                    content += `**${element.querySelectorAll('img').length >= 1 ? element.querySelectorAll('img')[0].alt : 'ChatGPT'}**: ${h(whiteSpace.innerHTML)}\n\n`;
+                    processedWhiteSpaces.add(htmlContent);
+                }
             }
         }
 
