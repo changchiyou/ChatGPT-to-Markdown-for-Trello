@@ -16,7 +16,7 @@ This was particularly challenging since the existing Chrome Plugin for convertin
 ## Usage
 
 > [!TIP]
-> Check [demo.md](/demo/README.MD) first to quickly understand how to convert conversation with this plugin.
+> Check [demo](/demo/README.MD) first to quickly understand how to convert conversation with this plugin.
 
 By clicking the `Markdown` button, the conversation would be convert to markdown syntax and storage in your clipboard.
 
