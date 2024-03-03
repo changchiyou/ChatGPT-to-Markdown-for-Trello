@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ChatGPT-to-Markdown-for-Trello
 // @namespace    https://chat.openai.com/
-// @version      1.0.2
+// @version      2.0.0
 // @description  Convert ChatGPT conversation text to Markdown for Trello
 // @match        https://chat.openai.com/*
 // @grant        GM_setClipboard
@@ -15,10 +15,23 @@
 
     let processedWhiteSpaces = new Set();
 
+    function removeClassFromHTML(htmlString, classNameToRemove) {
+        // Create a virtual body element to hold `htmlString`
+        var tempBody = document.createElement('body');
+        tempBody.innerHTML = htmlString;
+
+        // Use DOM  to find all elements with `classNameToRemove` and delete them
+        var elementsToRemove = tempBody.getElementsByClassName(classNameToRemove);
+        for (var i = elementsToRemove.length - 1; i >= 0; i--) {
+            elementsToRemove[i].parentNode.removeChild(elementsToRemove[i]);
+        }
+
+        return tempBody.innerHTML;
+    }
+
     function h(html) {
         // remove the head tab of code blocks
-        const divRegex = /<div\s+class="flex\s+items-center\s+relative\s+text-gray-200\s+bg-gray-800\s+px-4\s+py-2\s+text-xs\s+font-sans\s+justify-between\s+rounded-t-md"[^>]*>.*?<\/div>/g;
-        const withoutDiv = html.replace(divRegex, '');
+        const withoutDiv = removeClassFromHTML(html, "flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md");
 
         return withoutDiv.replace(/<\/pre>/g, '\n')
             .replace(/<p>/g, '')
