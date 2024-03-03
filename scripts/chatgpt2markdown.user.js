@@ -79,7 +79,7 @@
         button.className = 'btn relative btn-neutral markdown-btn';
         button.addEventListener('click', transformToMarkdown);
 
-        const targetElement = document.querySelector('.h-full.flex.ml-1');
+        const targetElement = document.querySelector('.flex.gap-2.pr-1');
 
         if (targetElement) {
             targetElement.appendChild(button);
